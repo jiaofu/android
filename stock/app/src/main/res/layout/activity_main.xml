@@ -103,7 +103,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:width="150dp"
+                android:width="200dp"
                 android:inputType="number"
                 android:maxLines="2"
                 android:ellipsize="marquee"
@@ -220,6 +220,11 @@
                 app:layout_constraintTop_toBottomOf="@id/shangYuJingChanBi" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
             <EditText
                 android:id="@+id/kouFeiJingLiRun"
                 android:layout_width="wrap_content"
@@ -230,6 +235,21 @@
                 android:inputType="number"
                 app:layout_constraintTop_toBottomOf="@id/shangYuJingChanBi" />
 
+
+            <TextView
+                android:id="@+id/kouFeiJingLiRunText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:width="150dp"
+                android:inputType="number"
+
+                android:text="年度抠非净利润"
+                app:layout_constraintBaseline_toBaselineOf="@+id/shangYuJingChanBiText"
+                app:layout_constraintLeft_toRightOf="@id/shangYuJingChanBiText"
+                app:layout_constraintTop_toBottomOf="@id/shangYuJingChanBiText" />
+
+        </LinearLayout>
             <EditText
                 android:id="@+id/guBen"
                 android:layout_width="wrap_content"
@@ -269,7 +289,28 @@
                 app:layout_constraintLeft_toRightOf="@id/ziJinChengBen"
                 app:layout_constraintTop_toBottomOf="@id/guBen" />
         </LinearLayout>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="计算"
+                tools:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/cashResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:scrollbars="vertical"
+                android:singleLine="false"
+                android:text="现金流结果:"
+                app:layout_constraintBaseline_toBaselineOf="@+id/ziJinChengBen"
+                app:layout_constraintLeft_toRightOf="@id/ziJinChengBen"
+                app:layout_constraintTop_toBottomOf="@id/guBen" />
         </LinearLayout>
+
+
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
