@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="15dip">
+
+            <EditText
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:width="150dp"
+                android:hint="股价"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/shiYing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:width="150dp"
+                android:hint="市盈率"
+                android:inputType="number"
+                app:layout_constraintTop_toBottomOf="@id/price" />
+
+
+            <EditText
+                android:id="@+id/shiJing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:width="150dp"
+                android:hint="市净率"
+                android:inputType="number"
+                app:layout_constraintTop_toBottomOf="@id/shiYing" />
+
+            <EditText
+                android:id="@+id/jingLiRungGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:width="150dp"
+                android:hint="净利润增加比"
+                android:inputType="number"
+                app:layout_constraintTop_toBottomOf="@id/shiJing" />
+
+            <EditText
+                android:id="@+id/peg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:width="150dp"
+                android:hint="peg"
+                android:inputType="number"
+                app:layout_constraintTop_toBottomOf="@id/jingLiRungGroup" />
+
+            <EditText
+                android:id="@+id/cashGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:width="150dp"
+                android:hint="现金收入比"
+                android:inputType="number"
+                app:layout_constraintTop_toBottomOf="@id/peg" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/jingZiChanGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:width="150dp"
+                android:hint="净资产收入比"
+                android:inputType="number"
+                app:layout_constraintTop_toBottomOf="@id/cashGroup" />
+
+
+            <TextView
+                android:id="@+id/jingZiChanGroupText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:width="150dp"
+                android:inputType="number"
+                android:maxLines="2"
+                android:ellipsize="marquee"
+                android:text="净资产收益率过5年大于15%"
+                app:layout_constraintBaseline_toBaselineOf="@+id/jingZiChanGroup"
+                app:layout_constraintLeft_toRightOf="@id/jingZiChanGroup"
+                app:layout_constraintTop_toBottomOf="@id/cashGroup" />
+
+        </LinearLayout>
+            <EditText
+                android:id="@+id/renJunChuangShou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:width="150dp"
+                android:hint="人均创收"
+                android:inputType="number"
+                app:layout_constraintTop_toBottomOf="@id/jingZiChanGroup" />
+
+            <EditText
+                android:id="@+id/renJunChuangLi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:width="150dp"
+                android:hint="人均创收"
+                android:inputType="number"
+                app:layout_constraintTop_toBottomOf="@id/renJunChuangShou" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/zongZiChanZhouZhuanLv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:width="150dp"
+                android:hint="总资产周转率"
+                android:inputType="number"
+                app:layout_constraintTop_toBottomOf="@id/renJunChuangLi" />
+
+
+            <TextView
+                android:id="@+id/zongZiChanZhouZhuanLvText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:width="150dp"
+                android:inputType="number"
+
+                android:text="总资产收益率要大于100%"
+                app:layout_constraintBaseline_toBaselineOf="@+id/zongZiChanZhouZhuanLv"
+                app:layout_constraintLeft_toRightOf="@id/zongZiChanZhouZhuanLv"
+                app:layout_constraintTop_toBottomOf="@id/zongZiChanZhouZhuanLv" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/jiDunShouRuGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:width="150dp"
+                android:hint="总资产周转率"
+                android:inputType="number"
+                app:layout_constraintTop_toBottomOf="@id/zongZiChanZhouZhuanLv" />
+
+            <TextView
+                android:id="@+id/jiDunShouRuGroupText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:width="150dp"
+                android:inputType="number"
+
+                android:text="8个季度收入增长大于15%"
+                app:layout_constraintBaseline_toBaselineOf="@+id/jiDunShouRuGroup"
+                app:layout_constraintLeft_toRightOf="@id/jiDunShouRuGroup"
+                app:layout_constraintTop_toBottomOf="@id/jiDunShouRuGroup" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/shangYuJingChanBi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:width="150dp"
+                android:hint="商誉净产比"
+                android:inputType="number"
+                app:layout_constraintTop_toBottomOf="@id/jiDunShouRuGroup" />
+
+            <TextView
+                android:id="@+id/shangYuJingChanBiText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:width="150dp"
+                android:inputType="number"
+
+                android:text="低于50%或者更谨慎30%"
+                app:layout_constraintBaseline_toBaselineOf="@+id/shangYuJingChanBi"
+                app:layout_constraintLeft_toRightOf="@id/shangYuJingChanBi"
+                app:layout_constraintTop_toBottomOf="@id/shangYuJingChanBi" />
+        </LinearLayout>
+
+            <EditText
+                android:id="@+id/kouFeiJingLiRun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:width="150dp"
+                android:hint="扣非净利润"
+                android:inputType="number"
+                app:layout_constraintTop_toBottomOf="@id/shangYuJingChanBi" />
+
+            <EditText
+                android:id="@+id/guBen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:width="150dp"
+                android:hint="股本"
+                android:inputType="number"
+                app:layout_constraintTop_toBottomOf="@id/kouFeiJingLiRun" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/ziJinChengBen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:width="150dp"
+                android:hint="资金成本"
+                android:inputType="number"
+                android:text="0.08"
+                app:layout_constraintTop_toBottomOf="@id/guBen" />
+
+            <TextView
+                android:id="@+id/ziJinChengBenText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:width="150dp"
+                android:inputType="number"
+
+                android:text="资金成本"
+                app:layout_constraintBaseline_toBaselineOf="@+id/ziJinChengBen"
+                app:layout_constraintLeft_toRightOf="@id/ziJinChengBen"
+                app:layout_constraintTop_toBottomOf="@id/guBen" />
+        </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
