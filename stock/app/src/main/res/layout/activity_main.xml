@@ -30,7 +30,7 @@
                 android:layout_marginLeft="20dp"
                 android:width="150dp"
                 android:hint="股价"
-                android:inputType="number" />
+                android:inputType="numberSigned|numberDecimal" />
 
             <EditText
                 android:id="@+id/shiYing"
@@ -39,7 +39,7 @@
                 android:layout_marginLeft="20dp"
                 android:width="150dp"
                 android:hint="市盈率"
-                android:inputType="number"
+                android:inputType="numberSigned|numberDecimal"
                 app:layout_constraintTop_toBottomOf="@id/price" />
 
 
@@ -50,7 +50,7 @@
                 android:layout_marginLeft="20dp"
                 android:width="150dp"
                 android:hint="市净率"
-                android:inputType="number"
+                android:inputType="numberSigned|numberDecimal"
                 app:layout_constraintTop_toBottomOf="@id/shiYing" />
 
             <EditText
@@ -60,7 +60,7 @@
                 android:layout_marginLeft="20dp"
                 android:width="150dp"
                 android:hint="净利润增加比"
-                android:inputType="number"
+                android:inputType="numberSigned|numberDecimal"
                 app:layout_constraintTop_toBottomOf="@id/shiJing" />
 
             <EditText
@@ -70,7 +70,7 @@
                 android:layout_marginLeft="20dp"
                 android:width="150dp"
                 android:hint="peg"
-                android:inputType="number"
+                android:inputType="numberSigned|numberDecimal"
                 app:layout_constraintTop_toBottomOf="@id/jingLiRungGroup" />
 
             <EditText
@@ -80,7 +80,7 @@
                 android:layout_marginLeft="20dp"
                 android:width="150dp"
                 android:hint="现金收入比"
-                android:inputType="number"
+                android:inputType="numberSigned|numberDecimal"
                 app:layout_constraintTop_toBottomOf="@id/peg" />
 
         <LinearLayout
@@ -94,7 +94,7 @@
                 android:layout_marginLeft="20dp"
                 android:width="150dp"
                 android:hint="净资产收入比"
-                android:inputType="number"
+                android:inputType="numberSigned|numberDecimal"
                 app:layout_constraintTop_toBottomOf="@id/cashGroup" />
 
 
@@ -104,7 +104,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:width="200dp"
-                android:inputType="number"
+                android:inputType="numberSigned|numberDecimal"
                 android:maxLines="2"
                 android:ellipsize="marquee"
                 android:text="净资产收益率过5年大于15%"
@@ -120,7 +120,7 @@
                 android:layout_marginLeft="20dp"
                 android:width="150dp"
                 android:hint="人均创收"
-                android:inputType="number"
+                android:inputType="numberSigned|numberDecimal"
                 app:layout_constraintTop_toBottomOf="@id/jingZiChanGroup" />
 
             <EditText
@@ -130,7 +130,7 @@
                 android:layout_marginLeft="20dp"
                 android:width="150dp"
                 android:hint="人均创收"
-                android:inputType="number"
+                android:inputType="numberSigned|numberDecimal"
                 app:layout_constraintTop_toBottomOf="@id/renJunChuangShou" />
 
 
@@ -145,7 +145,7 @@
                 android:layout_marginLeft="20dp"
                 android:width="150dp"
                 android:hint="总资产周转率"
-                android:inputType="number"
+                android:inputType="numberSigned|numberDecimal"
                 app:layout_constraintTop_toBottomOf="@id/renJunChuangLi" />
 
 
@@ -155,8 +155,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:width="150dp"
-                android:inputType="number"
-
                 android:text="总资产收益率要大于100%"
                 app:layout_constraintBaseline_toBaselineOf="@+id/zongZiChanZhouZhuanLv"
                 app:layout_constraintLeft_toRightOf="@id/zongZiChanZhouZhuanLv"
@@ -175,7 +173,7 @@
                 android:layout_marginLeft="20dp"
                 android:width="150dp"
                 android:hint="总资产周转率"
-                android:inputType="number"
+                android:inputType="numberSigned|numberDecimal"
                 app:layout_constraintTop_toBottomOf="@id/zongZiChanZhouZhuanLv" />
 
             <TextView
@@ -184,7 +182,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:width="150dp"
-                android:inputType="number"
+
 
                 android:text="8个季度收入增长大于15%"
                 app:layout_constraintBaseline_toBaselineOf="@+id/jiDunShouRuGroup"
@@ -203,7 +201,7 @@
                 android:layout_marginLeft="20dp"
                 android:width="150dp"
                 android:hint="商誉净产比"
-                android:inputType="number"
+                android:inputType="numberSigned|numberDecimal"
                 app:layout_constraintTop_toBottomOf="@id/jiDunShouRuGroup" />
 
             <TextView
@@ -212,7 +210,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:width="150dp"
-                android:inputType="number"
+
 
                 android:text="低于50%或者更谨慎30%"
                 app:layout_constraintBaseline_toBaselineOf="@+id/shangYuJingChanBi"
@@ -232,7 +230,7 @@
                 android:layout_marginLeft="20dp"
                 android:width="150dp"
                 android:hint="扣非净利润"
-                android:inputType="number"
+                android:inputType="numberSigned|numberDecimal"
                 app:layout_constraintTop_toBottomOf="@id/shangYuJingChanBi" />
 
 
@@ -242,7 +240,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:width="150dp"
-                android:inputType="number"
+
 
                 android:text="年度抠非净利润"
                 app:layout_constraintBaseline_toBaselineOf="@+id/shangYuJingChanBiText"
@@ -257,7 +255,7 @@
                 android:layout_marginLeft="20dp"
                 android:width="150dp"
                 android:hint="股本"
-                android:inputType="number"
+                android:inputType="numberSigned|numberDecimal"
                 app:layout_constraintTop_toBottomOf="@id/kouFeiJingLiRun" />
 
 
@@ -272,7 +270,7 @@
                 android:layout_marginLeft="20dp"
                 android:width="150dp"
                 android:hint="资金成本"
-                android:inputType="number"
+                android:inputType="numberSigned|numberDecimal"
                 android:text="0.08"
                 app:layout_constraintTop_toBottomOf="@id/guBen" />
 
@@ -282,7 +280,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:width="150dp"
-                android:inputType="number"
+
 
                 android:text="资金成本"
                 app:layout_constraintBaseline_toBaselineOf="@+id/ziJinChengBen"

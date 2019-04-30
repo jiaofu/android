@@ -62,11 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
                 String priceTest = price.getText().toString();
 
-                if(priceTest == null || priceTest.equals("")){
-                    Toast toast = Toast.makeText(MainActivity.this,"价格内容为空",Toast.LENGTH_LONG);
-                    toast.show();
-                    return;
-                }
+                if(priceTest == null || priceTest.equals("")){         
                 Double ziJinChengBenNum = Double.parseDouble(ziJinChengBenTest);
                 Double jingLiRungGroupNum = Double.parseDouble(jingLiRungGroupTest);
                 Double guBenNum = Double.parseDouble(guBenTest);
